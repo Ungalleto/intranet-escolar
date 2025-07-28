@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>🎓 Panel Académico</h1>
+
+  <h2>Mis cursos activos</h2>
+  {% if cursos %}
+    <ul>
+      {% for curso in cursos %}
+        <li>
+          <a href="{% url 'cursos:detail' curso.slug %}">
+            {{ curso.nombre }} — {{ curso.grado }} ({{ curso.anio }})
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No estás inscrito en ningún curso.</p>
+  {% endif %}
+
+  <hr>
+  <h3>Accesos rápidos</h3>
+  <ul>
+    <li><a href="{% url 'cursos:list' %}">📚 Ver todos los cursos</a></li>
+    <li><a href="#">📥 Materiales</a></li>
+    <li><a href="#">💬 Foros</a></li>
+    <li><a href="#">📝 Evaluaciones</a></li>
+  </ul>
+{% endblock %}

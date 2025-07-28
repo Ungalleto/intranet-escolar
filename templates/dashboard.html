@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Bienvenido, {{ request.user.get_full_name|default:request.user.username }}</h1>
+
+  {% if request.user.role == 'student' %}
+    <p><strong>Panel de Estudiante</strong></p>
+  {% elif request.user.role == 'teacher' %}
+    <p><strong>Panel de Maestro</strong></p>
+  {% else %}
+    <p><strong>Panel de Administrador</strong></p>
+  {% endif %}
+
+  <h3>Pagos pendientes:</h3>
+  <ul>
+    {% for pago in pendientes %}<li>{{ pago }}</li>{% empty %}<li>— Ninguno —</li>{% endfor %}
+  </ul>
+
+  <h3>Aulas:</h3>
+  <ul>
+    {% for aula in aulas %}<li>{{ aula }}</li>{% empty %}<li>— Ninguna —</li>{% endfor %}
+  </ul>
+
+  <h3>Cursos:</h3>
+  <ul>
+    {% for curso in cursos %}<li>{{ curso }}</li>{% empty %}<li>— Ninguno —</li>{% endfor %}
+  </ul>
+
+  <h3>Ciclos:</h3>
+  <ul>
+    {% for ciclo in ciclos %}<li>{{ ciclo }}</li>{% empty %}<li>— Ninguno —</li>{% endfor %}
+  </ul>
+{% endblock %}

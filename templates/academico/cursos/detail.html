@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>{{ curso.nombre }}</h1>
+  <h2>Sub‑módulos</h2>
+  <ul>
+    {% for sm in submodulos %}
+      <li>{{ sm.titulo }}</li>
+    {% empty %}
+      <li>— Sin sub‑módulos —</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'academico:cursos:list' %}">← Volver a cursos</a>
+{% endblock %}

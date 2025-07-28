@@ -1,0 +1,23 @@
+# Entorno virtual
+env/
+venv/
+intra/
+
+# Archivos de Python
+*.pyc
+__pycache__/
+
+# Archivos de configuración
+*.sqlite3
+*.log
+.env
+
+# Archivos de Django
+db.sqlite3
+/media/
+staticfiles/
+static_root/
+
+# VSCode, PyCharm u otros
+.vscode/
+.idea/

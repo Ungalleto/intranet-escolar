@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <div style="text-align:center; margin-top:4rem;">
+    <h2>Gracias por su visita, ¡vuelva pronto!</h2>
+    <p>Su sesión ha sido cerrada correctamente.</p>
+    <a href="{% url 'login' %}">
+      <button type="button">Iniciar sesión</button>
+    </a>
+  </div>
+{% endblock %}
