@@ -27,3 +27,28 @@ def dashboard(request):
 @method_decorator(never_cache, name='dispatch')
 class CustomLogoutView(LogoutView):
     template_name = 'registration/logged_out.html'
+
+# --- Helper functions -------------------------------------------------------
+
+def get_pagos_pendientes(user):
+    """Return a list of pending payments for the given user."""
+    # Placeholder implementation to avoid runtime errors
+    return []
+
+
+def get_aulas(user):
+    """Return a list of classrooms associated with the given user."""
+    # Placeholder implementation to avoid runtime errors
+    return []
+
+
+def get_cursos(user):
+    """Return a list of courses associated with the given user."""
+    # Placeholder implementation to avoid runtime errors
+    return []
+
+
+def get_ciclos(user):
+    """Return a list of academic cycles associated with the given user."""
+    # Placeholder implementation to avoid runtime errors
+    return []
