@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def biblioteca_list(request):
+    """Listado de biblioteca."""
+    return render(request, 'administrativo/biblioteca/list.html')

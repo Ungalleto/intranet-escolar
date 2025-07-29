@@ -16,8 +16,8 @@ urlpatterns = [
     # Módulos grandes
     path('academico/', include('academico.urls',
                                namespace='academico')),
-    #path('administrativo/', include('administrativo.urls',
-    #                                namespace='administrativo')),
+    path('administrativo/', include('administrativo.urls',
+                                    namespace='administrativo')),
 
     # Dashboard genérico u otras rutas
     path('', include('core.urls')),

@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def notas_list(request):
+    """Listado de notas."""
+    return render(request, 'administrativo/notas/list.html')

@@ -5,6 +5,6 @@ from . import views
 app_name = 'materiales'   # ← así coincide con namespace='materiales'
 
 urlpatterns = [
-    #path('', views.materiales_list, name='list'),
+    path('', views.materiales_list, name='list'),
     # …
 ]

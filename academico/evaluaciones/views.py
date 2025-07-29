@@ -2,5 +2,6 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
 @login_required
-def app_list(request):
-    return render(request, 'academico/evaluaciones/list.html')  # ajusta el path
+def evaluaciones_list(request):
+    """Listado general de evaluaciones."""
+    return render(request, 'academico/evaluaciones/list.html')

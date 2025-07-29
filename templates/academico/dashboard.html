@@ -7,7 +7,7 @@
     <ul>
       {% for curso in cursos %}
         <li>
-          <a href="{% url 'cursos:detail' curso.slug %}">
+          <a href="{% url 'academico:cursos:detail' curso.slug %}">
             {{ curso.nombre }} — {{ curso.grado }} ({{ curso.anio }})
           </a>
         </li>
@@ -20,7 +20,7 @@
   <hr>
   <h3>Accesos rápidos</h3>
   <ul>
-    <li><a href="{% url 'cursos:list' %}">📚 Ver todos los cursos</a></li>
+    <li><a href="{% url 'academico:cursos:list' %}">📚 Ver todos los cursos</a></li>
     <li><a href="#">📥 Materiales</a></li>
     <li><a href="#">💬 Foros</a></li>
     <li><a href="#">📝 Evaluaciones</a></li>

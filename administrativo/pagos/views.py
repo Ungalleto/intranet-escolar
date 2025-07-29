@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def pagos_list(request):
+    """Listado de pagos."""
+    return render(request, 'administrativo/pagos/list.html')
